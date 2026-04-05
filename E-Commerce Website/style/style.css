@@ -1,0 +1,117 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background: #fff; color: #333; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; align-items: center; background: #111; color: #fff; padding: 15px 5%; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; gap: 15px;}
+.logo { font-weight: 800; font-size: 22px; }
+.logo span { color: #ff3b30; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 15px; }
+.nav-links a { color: #ccc; text-decoration: none; font-size: 14px; }
+.nav-links a:hover { color: #fff; }
+.cart-btn { background: #ff3b30; color: #fff; border: none; padding: 8px 20px; border-radius: 5px; font-weight: 600; cursor: pointer; }
+
+/* Main Container */
+.container { max-width: 1400px; margin: 20px auto; padding: 0 20px; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 20px; font-size: 13px; color: #777; }
+.sort-options { display: flex; gap: 10px; }
+.sort-options select { padding: 5px; border: 1px solid #ddd; border-radius: 4px; }
+
+/* Grid & Cards */
+.product-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+.card { border: 1px solid #eee; padding: 15px; border-radius: 12px; position: relative; display: flex; flex-direction: column; }
+.lock { position: absolute; top: 10px; right: 10px; border: 1px solid #eee; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 12px; }
+.p-img { width: 100%; height: 130px; object-fit: contain; margin-bottom: 10px; }
+.brand { font-size: 11px; color: #999; }
+.title { font-size: 13px; margin: 5px 0; min-height: 34px; line-height: 1.2; }
+.old-price { font-size: 11px; color: #bbb; text-decoration: line-through; }
+.price-box { border: 1px solid #ddd; text-align: center; padding: 8px; border-radius: 6px; margin: 8px 0; }
+.price-box b { display: block; font-size: 16px; }
+.price-box span { font-size: 10px; color: #666; }
+.range { font-size: 10px; color: #999; margin-bottom: 10px; min-height: 12px; }
+
+/* Specs & Tags */
+.label { font-size: 10px; font-weight: 700; color: #444; margin: 8px 0 4px; text-transform: uppercase; }
+.tags { display: flex; gap: 5px; flex-wrap: wrap; }
+.tags span { font-size: 10px; padding: 3px 8px; border: 1px solid #ddd; border-radius: 4px; }
+.tags span.active { background: #111; color: #fff; border-color: #111; }
+
+/* Colors */
+.colors { display: flex; gap: 6px; margin-top: auto; padding-top: 15px; }
+.colors div { width: 18px; height: 18px; border-radius: 4px; border: 1px solid #ddd; cursor: pointer; }
+
+/* Footer */
+.footer { background: #111; color: #fff; padding: 50px 5% 20px; margin-top: 50px; }
+.f-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+.f-col { flex: 1; min-width: 200px; }
+.f-col h4 { color: #ff3b30; margin-bottom: 15px; }
+.f-col a, .f-col p { display: block; color: #aaa; text-decoration: none; font-size: 14px; margin-bottom: 8px; }
+.f-bottom { text-align: center; border-top: 1px solid #222; margin-top: 30px; padding-top: 20px; font-size: 12px; color: #555; }
+
+/* --- MINI HERO --- */
+.hero-mini { height: 400px; background: #000; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; padding: 0 20px;}
+.hero-text h1 { font-size: 42px; font-weight: 600; }
+.hero-text p { font-size: 18px; margin: 10px 0 20px; color: #a1a1a6; }
+.hero-links { display: flex; gap: 15px; justify-content: center; align-items: center; }
+.btn-sm { background: #0071e3; color: #fff; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-size: 14px; }
+.lnk-sm { color: #2997ff; text-decoration: none; font-size: 14px; }
+
+/* --- COMPACT TRUST BAR --- */
+.trust-bar { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 20px 5%; background: #f5f5f7; border-bottom: 1px solid #e5e5e5; gap: 15px;}
+.trust-item { font-size: 13px; font-weight: 500; color: #1d1d1f; display: flex; align-items: center; gap: 8px; }
+
+/* --- SLIM NEWSLETTER --- */
+.news-slim { padding: 40px 20px; text-align: center; background: #fff; }
+.news-slim h3 { font-size: 20px; margin-bottom: 15px; font-weight: 600; }
+.slim-form { display: flex; max-width: 350px; margin: 0 auto; border-bottom: 1px solid #d2d2d2; }
+.slim-form input { flex: 1; border: none; padding: 10px; outline: none; font-size: 14px; }
+.slim-form button { background: none; border: none; font-size: 20px; cursor: pointer; padding: 0 10px; }
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+/* Large Tablets & Small Laptops */
+@media (max-width: 1200px) {
+    .product-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-text h1 { font-size: 36px; }
+}
+
+/* Mobile Landscape & Smaller Tablets */
+@media (max-width: 768px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    /* Navbar adjustments */
+    .navbar { flex-direction: column; text-align: center; }
+    .nav-links { justify-content: center; }
+    
+    /* Toolbar adjustments */
+    .toolbar { flex-direction: column; justify-content: center; text-align: center; }
+    
+    /* Hero adjustments */
+    .hero-mini { height: 350px; }
+    .hero-text h1 { font-size: 30px; }
+    
+    /* Footer adjustments */
+    .f-content { flex-direction: column; text-align: center; }
+}
+
+/* Mobile Portrait */
+@media (max-width: 576px) {
+    .product-grid { grid-template-columns: 1fr; }
+    
+    /* Toolbar sort options stack */
+    .sort-options { flex-direction: column; width: 100%; }
+    .sort-options select { width: 100%; margin: 0; }
+    
+    /* Trust Bar stack */
+    .trust-bar { flex-direction: column; align-items: center; }
+    .trust-item { width: auto; justify-content: center; }
+    
+    /* Hero adjustments */
+    .hero-mini { height: 300px; }
+    .hero-text h1 { font-size: 26px; }
+    .hero-text p { font-size: 16px; }
+}
